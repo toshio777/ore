@@ -81,6 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: ore1_production
-  username: ore1
-  password: <%= ENV['ORE1_DATABASE_PASSWORD'] %>
+  # ***** 以下を修正 *****
+  database: ore_production
+  username: postgres
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:hostname] %>
