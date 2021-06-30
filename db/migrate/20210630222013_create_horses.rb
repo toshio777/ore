@@ -6,7 +6,7 @@ class CreateHorses < ActiveRecord::Migration[6.1]
       t.integer :year
       t.integer :last_race
 
-      t.timestamps
+      
     end
   end
 end
