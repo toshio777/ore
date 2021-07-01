@@ -23,7 +23,7 @@ module Api
 
 
       def random_choose
-        @horse = Horse.order("RANDOM()").limit(8)
+        @horse = Horse.order("RAND()").limit(8)
       end
 
 
