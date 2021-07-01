@@ -8,17 +8,6 @@ module Api
         render json: { data: horses }
       end
 
-      def show
-        render json: { status: 'SUCCESS', message: 'Loaded the post', data: @horse }
-      end
-
-      private
-
-      def set_horse
-        @horse = Horse.find(params[:id])
-      end
-
-
       
     end
   end
