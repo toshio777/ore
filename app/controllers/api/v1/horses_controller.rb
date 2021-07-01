@@ -27,7 +27,7 @@ module Api
       end
 
       def update
-        if @horse.update(post_params)
+        if @horse.update(horse_params)
           render json: { status: 'SUCCESS', message: 'Updated the post', data: @horse }
         else
           render json: { status: 'SUCCESS', message: 'Not updated', data: @horse.errors }
