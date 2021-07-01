@@ -36,7 +36,7 @@ module Api
 
       private
 
-      def set_post
+      def set_horse
         @horse = Horse.find(params[:id])
       end
 
