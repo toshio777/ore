@@ -8,6 +8,11 @@ module Api
         render json: { data: horses }
       end
 
+      def show
+        render json: { data: horses }
+      end
+
+
       
     end
   end
