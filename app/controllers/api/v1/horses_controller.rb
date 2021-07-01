@@ -9,9 +9,8 @@ module Api
       end
 
       def show
-        render json: { data: @horse }
+        render json: { status: 'SUCCESS', message: 'Loaded the post', data: @horse }
       end
-
 
       private
 
