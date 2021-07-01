@@ -21,6 +21,12 @@ module Api
         end
       end
 
+
+      def random_choose
+        @horse = Horse.order("RANDOM()").limit(8)
+      end
+
+
       def destroy
         @horse.destroy
         render json: { status: 'SUCCESS', message: 'Deleted the post', data: @horse }
