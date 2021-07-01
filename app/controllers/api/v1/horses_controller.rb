@@ -9,7 +9,7 @@ module Api
       end
 
       def show
-        render json: { data: horses }
+        render json: { data: @horse }
       end
 
 
