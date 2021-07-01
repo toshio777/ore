@@ -1,7 +1,7 @@
 module Api
   module V1
     class HorsesController < ApplicationController
-      before_action :set_horse, only: [:show, :update, :destroy, :random_choose]
+      before_action :set_horse, only: [:show, :random_choose]
 
       def index
         horses = Horse.order(power: :desc)
@@ -16,7 +16,7 @@ module Api
 
 
       def random_choose
-        @horse = Horse.order("RAND()").limit(8)
+        horses = Horse.order("RAND()").limit(8)
         render json: { data: horses }
       end
 
