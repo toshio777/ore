@@ -4,7 +4,7 @@ module Api
       before_action :set_horse, only: [:show, :update, :destroy]
 
       def index
-        horses = Horse.order(created_at: :desc)
+        horses = Horse.order(power: :desc)
         render json: { status: 'SUCCESS', message: 'Loaded posts', data: horses }
       end
 
