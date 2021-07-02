@@ -4,7 +4,7 @@ module Api
       before_action :set_horse, only: [:show, :random_choose]
 
       def index
-        horses = Horse.order(power: :asc)
+        horses = Horse.order("RANDOM()").limit(8)
         render json: { status: 'SUCCESS', message: 'Loaded posts', data: horses }
       end
 
