@@ -5,7 +5,7 @@ module Api
 
       def index
         horses = Horse.order("RANDOM()").limit(8)
-        render json: { status: 'SUCCESS', message: 'Loaded posts', data: horses }
+        render json: { data: horses }
       end
 
       def show
